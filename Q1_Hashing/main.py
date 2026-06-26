@@ -1,4 +1,5 @@
 from inventory import PharmacyInventory
+from performance import performance_comparison
 
 inventory = PharmacyInventory()
 
@@ -8,7 +9,10 @@ while True:
     print("1. Display Medicines")
     print("2. Search Medicine")
     print("3. Insert Medicine")
-    print("4. Exit")
+    print("4. Update Medicine")
+    print("5. Delete Medicine")
+    print("6. Performance Comparison")
+    print("7. Exit")
 
     choice = input("Enter your choice: ")
 
@@ -23,8 +27,17 @@ while True:
         inventory.insert()
 
     elif choice == "4":
-        print("Thank you.")
+        inventory.update()
+
+    elif choice == "5":
+        inventory.delete()
+
+    elif choice == "6":
+        performance_comparison()
+
+    elif choice == "7":
+        print("Thank you!")
         break
 
     else:
-        print("Invalid Choice.")
+        print("Invalid Choice!")

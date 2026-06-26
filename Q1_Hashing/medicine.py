@@ -14,3 +14,10 @@ class Medicine:
             f"{self.quantity:<10}"
             f"RM {self.price:.2f}"
         )
+
+    def display_details(self):
+        print(f"Medicine ID   : {self.medicine_id}")
+        print(f"Medicine Name : {self.name}")
+        print(f"Category      : {self.category}")
+        print(f"Quantity      : {self.quantity}")
+        print(f"Price         : RM {self.price:.2f}")
